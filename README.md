@@ -75,10 +75,11 @@ You can use the tee command to save command-line output to a file:
 The SPMM kernel of Accel-GCN incorporates block-level partitioning and a combined warp strategy for traversing the right-hand matrix column dimension. 
 This approach exploits multi-level memory efficiency, memory coalescing, and alignment, which further optimizes execution efficiency.
 
-![architecture](images/block_vs_warp6.png)
+![architecture](images/maxk_forward.png)
+![architecture](images/maxk_backward.png)
 
 ### Speedups over other SPMM kernels
 
 On average, evaluation of Accel-GCN across 18 benchmark graphs demonstrates that Accel-GCN surpasses cuSPARSE, GNNAdvisor, and graph-BLAST by 17.3%, 86.3%, and 193.5% respectively.
 
-![speedup](images/normalized_speed_amit.png)
+![speedup](images/maxk_kernel_speedup.png)
