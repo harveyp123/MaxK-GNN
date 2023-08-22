@@ -16,7 +16,7 @@ The following kernels are benchmarked here:
 ## Get started
 
 ### Prerequisites
-Nvidia GPU with compute capability greater than or equal to 8.6
+Nvidia GPU with compute capability greater than or equal to 8.0
 
 CUDA toolkit 12.0
 
