@@ -36,10 +36,9 @@ or you can use the following command:
 ```
 wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1rSrxfZcdhjlMsJNXwUUWCaqytX4aUHWc' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1rSrxfZcdhjlMsJNXwUUWCaqytX4aUHWc" -O maxk_graphs.tar.gz && rm -rf /tmp/cookies.txt
 ```
-Place the downloaded file in the project directory, then unzip it (and rename it).
+Place the downloaded file in the project directory, then unzip it.
 ```
 tar xzvf maxk_graphs.tar.gz
-mv maxk_graphs graphs
 ```
 Generate the meta-data for MaxK-GNN's kernels.
 ```
