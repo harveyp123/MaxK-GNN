@@ -72,8 +72,17 @@ You can use the tee command to save command-line output to a file:
 ## Kernel design of MaxK-GNN
 This work proposed MaxK-GNN, an acceleration framework that integrates the maxk nonlinearity function into the GNN workflow. The innovation encompasses a coalescing enhanced forward computation featuring row-wise product-based Sparse Matrix-Matrix Multiplication (SpGEMM) Kernel utilizing CBSR for input feature matrix fetching. Moreover, strategic placement of a sparse output accumulation buffer in shared memory has been employed to further the efficiency. Building upon this, an optimized backward computation was developed, characterized by an outer product-based and Sampled Sparse Matrix Dense Matrix Multiplication (SSpMM) Kernel, effectively advancing the capabilities of the established system.
 
-![architecture](images/maxk_forward.png)
-![architecture](images/maxk_backward.png)
+<table>
+  <tr>
+    <td>
+      <img src="images/maxk_forward.png" alt="maxk_forward"/>
+    </td>
+    <td>
+      <img src="images/maxk_backward.png" alt="maxk_backward"/>
+    </td>
+  </tr>
+</table>
+
 
 ### Speedups over other SPMM kernels
 For graphs with average degrees greater than 50, the average speedup of the SSpMM kernel at $k=8, 16, 32, 64$ is $6.93\times$, $5.39\times$, $2.55\times$, $1.46\times$ respectively, as compared to the cuSPARSE and $9.57\times$, $7.46\times$, $3.55\times$, $2.04\times$, respectively, as compared to the GNNAdvisor.
